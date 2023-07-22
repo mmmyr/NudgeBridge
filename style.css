@@ -1,0 +1,72 @@
+.hero-image {
+    background-image: url('assets/homepage-background1.jpg');
+    background-size: cover;
+}
+    /* Adjust this property to control how the image is displayed */
+.navbar-nav {
+    /* padding-left: 500px; */
+}
+
+.jumbotron {
+    background-color: white;
+}
+
+.black-frame {
+    background-color: black;
+    color: white;
+    /* Set the height of the black frame as per your requirement */
+    height: 300px;
+    /* Change this value as needed */
+}
+.jumbotron {
+    text-align:center
+}
+
+#changing-background {
+    position: relative;
+    padding: 30px;
+    /* Set the height or min-height to adjust to your image height */
+    min-height: 400px;
+}
+
+.carousel-inner {
+    height: 100%;
+}
+
+.carousel-item img {
+    object-fit: cover;
+    width: 100%;
+    height: 100%;
+}
+
+.carousel-content {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+}
+
+.large-text {
+    font-size: 30px;
+}
+
+.small-text {
+    font-size: 18px;
+}
+
+/* You can customize the button style as needed */
+.btn-primary {
+    background-color: #007bff;
+    color: white;
+    font-size: 20px;
+    padding: 10px 20px;
+    border-radius: 5px;
+}
+
+.carousel-inner img {
+    width: 100%;
+    height: 100vh;
+    /* Adjust this as needed */
+    object-fit: cover;
+}
