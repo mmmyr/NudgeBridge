@@ -1,32 +1,155 @@
-.hero-image {
-    background-image: url('assets/homepage-background1.jpg');
+@font-face {
+    font-family: 'Miller Display';
+    src: url(assets/font/MillerDisplay-Bold.ttf) format('woff2'),
+        url(assets/font/MillerDisplay-Bold.ttf) format('woff');
+}
+@font-face {
+    font-family: 'Microsoft Yahei';
+    /*
+    microsoft yahei regular 
+    */
+        src: url(assets/font/HelveticaNowDisplay-Medium.otf) format('woff2'),
+             url(assets/font/HelveticaNowDisplay-Medium.otf) format('woff');
+}
+
+@font-face {
+    font-family:'Miller Banner Black';
+    src: url(assets/font/Miller-Banner-Black.ttf) format('woff2'),
+            url(assets/font/Miller-Banner-Black.ttf) format('woff');
+}
+
+@font-face {
+    font-family: 'Miller Display Roman';
+    src: url(assets/font/Miller\ Display\ Roman.otf) format('woff2'),
+        url(assets/font/Miller\ Display\ Roman.otf) format('woff');
+}
+body {
+    font-family: 'Miller Display';
+    padding-top: 4%;
+}
+
+p {
+    font-size: 0.9em;
+}
+
+h1 {
+    font-family: 'Miller Banner Black';
+}
+
+.display-font {
+    font-family: 'Miller Display';
+}
+.yahei-font{
+    font-family:'Microsoft Yahei';
+}
+
+.banner-font {
+    font-family: 'Miller Banner Black';
+}
+.display-roman {
+    font-family:'Miller Display Roman';
+}
+.navbar{
+    background-color: #191919;
+}
+/*
+同样的btn-outlint-dark, 怎么自定义成两种不同的形式？
+去掉button 点击后的扩张effect 
+*/
+.btn-outline-secondary {
+    color: white;
+    background-color: #191919;
+    border-color: #191919;
+    /*set the color you want here*/
+}
+
+.btn-outline-secondary:hover,
+.btn-outline-secondary:focus,
+.btn-outline-secondary:active,
+.btn-outline-secondary.active,
+.open>.dropdown-toggle.btn-outline-dark {
+    color: #F6A21E;
+    background-color: #191919;
+    border-color: #191919;  
+    /*set the color you want here*/
+}
+
+.btn-outline-dark {
+    color: #191919;
+    
+    /*set the color you want here*/
+}
+
+.btn-outline-dark:hover,
+.btn-outline-dark:focus,
+.btn-outline-dark:active,
+.btn-outline-dark.active,
+.open>.dropdown-toggle.btn-outline-dark {
+    color: #191919;
+    background-color: #F6A21E;
+    border-color: #F6A21E;
+    /*set the color you want here*/
+}
+
+.btn-outline-light {
+    color: white;
+    /*set the color you want here*/
+}
+
+.btn-outline-light:hover,
+.btn-outline-light:focus,
+.btn-outline-light:active,
+.btn-outline-light.active,
+.open>.dropdown-toggle.btn-outline-dark {
+    color: #191919;
+    background-color: #F6A21E;
+    border-color: #F6A21E;
+    /*set the color you want here*/
+}
+#blackFrame{
+    background-color: #191919;
+}
+
+.c-img{
+
+    filter:brightness;
+}
+.content {
+    text-align: center;
+    padding-top: 3%; /*this percentage is relative to the height of the screen*/
+}
+#achievement {
+    color: #191919;
+}
+#donate {
+    height: 700px;
+    width: 100%;
+    background-image: url('background.jpg');
+    background-repeat: no-repeat;
+    background-position: center;
     background-size: cover;
 }
-    /* Adjust this property to control how the image is displayed */
-.navbar-nav {
-    /* padding-left: 500px; */
+
+#author {
+    color: #191919;
 }
 
-.jumbotron {
+#Program {
+    height:35em;
     background-color: white;
 }
-
-.black-frame {
-    background-color: black;
-    color: white;
-    /* Set the height of the black frame as per your requirement */
-    height: 300px;
-    /* Change this value as needed */
+.carousel-indicators {
+    top:77%;
+    left:-74%;
 }
-.jumbotron {
-    text-align:center
+.carousel-indicators li {
+    width: 8px;
+    height: 8px;
+    background-color: #191919;
 }
 
-#changing-background {
-    position: relative;
-    padding: 30px;
-    /* Set the height or min-height to adjust to your image height */
-    min-height: 400px;
+.carousel .carousel-indicators li.active {
+    background-color: #F6A21E;
 }
 
 .carousel-inner {
@@ -56,8 +179,8 @@
 }
 
 /* You can customize the button style as needed */
-.btn-primary {
-    background-color: #007bff;
+.btn-light {
+    background-color: rgba(255, 255, 255, 0);
     color: white;
     font-size: 20px;
     padding: 10px 20px;
@@ -70,3 +193,5 @@
     /* Adjust this as needed */
     object-fit: cover;
 }
+
+
