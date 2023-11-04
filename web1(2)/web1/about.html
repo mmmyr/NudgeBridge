@@ -1,0 +1,1393 @@
+<!DOCTYPE html>
+<!-- saved from url=(0025)https://www.sobot.com/en/ -->
+<html lang="en">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width,initial-scale=1" />
+    <meta content="no-referrer-when-downgrade" name="referrer" />
+    <title>
+      Sobot | Customer service software_call center_livechat_chatbot
+    </title>
+    <meta name="keywords" content="" />
+    <meta name="description" content=" " />
+    <!-- <link rel="stylesheet" href="./about/animate.min.css" /> -->
+    <link rel="stylesheet" href="./css/element-ui.css" />
+    <script src="./about/jquery.min.js"></script>
+    <script
+      defer="defer"
+      src="./about/index.27c9b4c53f07663aa6ce.bundle.js"
+    ></script>
+    <link href="./css/about.css" rel="stylesheet" />
+    <style type="text/css">
+      .zc__bubble_container {
+        width: 396px;
+        position: fixed;
+        z-index: 999999;
+        bottom: 80px;
+        right: 40px;
+        overflow: hidden;
+        transition: scroll 2s ease 0s;
+        box-sizing: border-box;
+        display: none;
+        padding: 30px 0px 10px 0;
+      }
+      .zc__bubble_container.more {
+        width: 350px;
+      }
+      .zc__bubble_container.once {
+        width: 396px;
+      }
+      .zc__bubble_container .zc__bubble_container_close {
+        position: absolute;
+        top: 0px;
+        right: 10px;
+        width: 20px;
+        height: 20px;
+        border-radius: 50%;
+        border: none;
+        cursor: pointer;
+        display: none;
+      }
+      .zc__bubble_container .zc__bubble__wrap {
+        margin: 0;
+        padding: 10px 0 0 0;
+        list-style-type: none;
+        overflow: hidden;
+        max-height: 400px;
+        overflow-y: scroll;
+        width: 110%;
+        box-sizing: border-box;
+      }
+      .zc__bubble_container .zc__bubble__wrap .zc__bubble__item {
+        width: 100%;
+        max-width: 100%;
+        margin: 10px 0;
+        padding: 0;
+        list-style-type: none;
+        cursor: pointer;
+        padding-left: 36px;
+        box-sizing: border-box;
+      }
+      .zc__bubble_container .zc__bubble__wrap .zc__bubble__item .bubble-header {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+      }
+      .zc__bubble_container
+        .zc__bubble__wrap
+        .zc__bubble__item
+        .bubble-header
+        img {
+        width: 40px;
+        height: 40px;
+        border-radius: 50%;
+      }
+      .zc__bubble_container
+        .zc__bubble__wrap
+        .zc__bubble__item
+        .bubble-content {
+        width: 270px;
+        position: relative;
+        margin-left: 10px;
+        box-shadow: rgba(53, 53, 53, 0.15) 0px 0px 14px 0px;
+        padding: 10px;
+        border-radius: 3px;
+        color: #555556;
+        background: #fff;
+        margin-right: 20px;
+        box-sizing: border-box;
+      }
+      .zc__bubble_container
+        .zc__bubble__wrap
+        .zc__bubble__item
+        .bubble-content
+        .bubble-content-name {
+        display: block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 50%;
+        font-size: 12px;
+        color: #b6bfbd;
+      }
+      .zc__bubble_container
+        .zc__bubble__wrap
+        .zc__bubble__item
+        .bubble-content
+        .bubble-content-time {
+        position: absolute;
+        right: 7px;
+        top: 11px;
+        font-size: 12px;
+        color: #b6bfbd;
+      }
+      .zc__bubble_container
+        .zc__bubble__wrap
+        .zc__bubble__item
+        .bubble-content
+        .bubble-content-html {
+        margin-top: 10px;
+        margin-bottom: 5px;
+        color: #333;
+        font-size: 14px;
+      }
+      .zc__bubble_container
+        .zc__bubble__wrap
+        .zc__bubble__item
+        .bubble-content
+        .bubble-content-html
+        .zc__bubble__msg_file {
+        width: 100%;
+      }
+      .zc__bubble_container
+        .zc__bubble__wrap
+        .zc__bubble__item
+        .bubble-content
+        .bubble-content-html
+        .zc__bubble__msg_file
+        .file-container {
+        width: 100%;
+        height: 70px;
+        text-decoration: none;
+        display: block;
+        padding: 15px 15px 15px 50px;
+        position: relative;
+        box-shadow: rgba(53, 53, 53, 0.15) 0px 0px 10px 0px;
+        border-radius: 4px;
+        box-sizing: border-box;
+      }
+      .zc__bubble_container
+        .zc__bubble__wrap
+        .zc__bubble__item
+        .bubble-content
+        .bubble-content-html
+        .zc__bubble__msg_file
+        .file-container
+        .file-icon {
+        width: 34px;
+        height: 40px;
+        position: absolute;
+        left: 15px;
+        top: 15px;
+      }
+      .zc__bubble_container
+        .zc__bubble__wrap
+        .zc__bubble__item
+        .bubble-content
+        .bubble-content-html
+        .zc__bubble__msg_file
+        .file-container
+        .file-info {
+        width: 100%;
+        padding-left: 10px;
+        box-sizing: border-box;
+      }
+      .zc__bubble_container
+        .zc__bubble__wrap
+        .zc__bubble__item
+        .bubble-content
+        .bubble-content-html
+        .zc__bubble__msg_file
+        .file-container
+        .file-info
+        .file-info-name {
+        width: 100%;
+        height: 20px;
+        line-height: 20px;
+        font-size: 14px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        color: #515a7c;
+        text-align: left;
+      }
+      .zc__bubble_container
+        .zc__bubble__wrap
+        .zc__bubble__item
+        .bubble-content
+        .bubble-content-html
+        .zc__bubble__msg_file
+        .file-container
+        .file-info
+        .file-info-des {
+        width: 100%;
+        height: 18px;
+        line-height: 18px;
+        font-size: 12px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        color: #acb5c4;
+        text-align: left;
+      }
+      .zc__bubble_container .zc__bubble__wrap .zc__bubble__item_one {
+        width: 365px;
+        height: auto;
+        max-height: 400px;
+        background: #ffffff;
+        color: #777474;
+        font-size: 14px;
+        box-shadow: rgba(53, 53, 53, 0.15) 0px 0px 10px 0px;
+        border-top-left-radius: 4px;
+        border-top-right-radius: 4px;
+        border-bottom: 1px solid #e0e0e0;
+        cursor: pointer;
+        box-sizing: border-box;
+        margin: 0 0 0 10px;
+        overflow: hidden;
+      }
+      .zc__bubble_container
+        .zc__bubble__wrap
+        .zc__bubble__item_one
+        .bubble-header {
+        width: 100%;
+        height: 60px;
+        line-height: 30px;
+        box-sizing: border-box;
+        padding: 30px 100px 0px 70px;
+        position: relative;
+      }
+      .zc__bubble_container
+        .zc__bubble__wrap
+        .zc__bubble__item_one
+        .bubble-header
+        img {
+        width: 30px;
+        height: 30px;
+        position: absolute;
+        left: 30px;
+        border-radius: 50%;
+      }
+      .zc__bubble_container
+        .zc__bubble__wrap
+        .zc__bubble__item_one
+        .bubble-header
+        .bubble-header-name {
+        display: block;
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+        max-width: 90%;
+        font-size: 12px;
+        color: #b6bfbd;
+      }
+      .zc__bubble_container
+        .zc__bubble__wrap
+        .zc__bubble__item_one
+        .bubble-header
+        .bubble-header-time {
+        position: absolute;
+        right: 14px;
+        top: 30px;
+        font-size: 12px;
+        color: #b6bfbd;
+      }
+      .zc__bubble_container
+        .zc__bubble__wrap
+        .zc__bubble__item_one
+        .bubble-content {
+        width: 100%;
+        max-height: 300px;
+        overflow-y: scroll;
+        box-sizing: border-box;
+        padding: 14px 14px 8px 30px;
+        margin-bottom: 20px;
+        /*定义滚动条轨道 内阴影+圆角*/
+        /*定义滑块 内阴影+圆角*/
+      }
+      .zc__bubble_container
+        .zc__bubble__wrap
+        .zc__bubble__item_one
+        .bubble-content::-webkit-scrollbar {
+        width: 4px;
+        height: 4px;
+        background-color: #fff;
+      }
+      .zc__bubble_container
+        .zc__bubble__wrap
+        .zc__bubble__item_one
+        .bubble-content
+        ::-webkit-scrollbar-track {
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.3);
+        border-radius: 10px;
+        background-color: #f5f5f5;
+      }
+      .zc__bubble_container
+        .zc__bubble__wrap
+        .zc__bubble__item_one
+        .bubble-content::-webkit-scrollbar-thumb {
+        border-radius: 10px;
+        box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+        -webkit-box-shadow: inset 0 0 6px rgba(0, 0, 0, 0.1);
+        background-color: #c8c8c8;
+      }
+      .zc__bubble_container
+        .zc__bubble__wrap
+        .zc__bubble__item_one
+        .bubble-content
+        .zc__bubble__msg_file {
+        width: 100%;
+      }
+      .zc__bubble_container
+        .zc__bubble__wrap
+        .zc__bubble__item_one
+        .bubble-content
+        .zc__bubble__msg_file
+        .file-container {
+        width: 100%;
+        height: 70px;
+        text-decoration: none;
+        display: block;
+        padding: 15px 15px 15px 50px;
+        position: relative;
+        border-radius: 4px;
+        box-sizing: border-box;
+        box-shadow: rgba(53, 53, 53, 0.15) 0px 0px 10px 0px;
+      }
+      .zc__bubble_container
+        .zc__bubble__wrap
+        .zc__bubble__item_one
+        .bubble-content
+        .zc__bubble__msg_file
+        .file-container
+        .file-icon {
+        width: 34px;
+        height: 40px;
+        position: absolute;
+        left: 15px;
+        top: 15px;
+      }
+      .zc__bubble_container
+        .zc__bubble__wrap
+        .zc__bubble__item_one
+        .bubble-content
+        .zc__bubble__msg_file
+        .file-container
+        .file-info {
+        width: 100%;
+        padding-left: 10px;
+        box-sizing: border-box;
+      }
+      .zc__bubble_container
+        .zc__bubble__wrap
+        .zc__bubble__item_one
+        .bubble-content
+        .zc__bubble__msg_file
+        .file-container
+        .file-info
+        .file-info-name {
+        width: 100%;
+        height: 20px;
+        line-height: 20px;
+        font-size: 14px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        color: #515a7c;
+        text-align: left;
+      }
+      .zc__bubble_container
+        .zc__bubble__wrap
+        .zc__bubble__item_one
+        .bubble-content
+        .zc__bubble__msg_file
+        .file-container
+        .file-info
+        .file-info-des {
+        width: 100%;
+        height: 18px;
+        line-height: 18px;
+        font-size: 12px;
+        overflow: hidden;
+        white-space: nowrap;
+        text-overflow: ellipsis;
+        color: #acb5c4;
+        text-align: left;
+      }
+      .zc__bubble_container .zc__bubble__wrap .zc__bubble__item a,
+      .zc__bubble_container .zc__bubble__wrap .zc__bubble__item_one a {
+        color: #15a0e8;
+        text-decoration: underline;
+      }
+      .zc__bubble_container .zc__bubble__wrap .zc__bubble__item li,
+      .zc__bubble_container .zc__bubble__wrap .zc__bubble__item_one li {
+        list-style: none;
+      }
+      .zc__bubble_container .zc__bubble__wrap .zc__bubble__item iframe,
+      .zc__bubble_container .zc__bubble__wrap .zc__bubble__item_one iframe,
+      .zc__bubble_container .zc__bubble__wrap .zc__bubble__item embed,
+      .zc__bubble_container .zc__bubble__wrap .zc__bubble__item_one embed,
+      .zc__bubble_container .zc__bubble__wrap .zc__bubble__item table,
+      .zc__bubble_container .zc__bubble__wrap .zc__bubble__item_one table {
+        max-width: 100%;
+        width: auto !important;
+      }
+      .zc__bubble_container .zc__bubble__wrap .zc__bubble__item code,
+      .zc__bubble_container .zc__bubble__wrap .zc__bubble__item_one code {
+        white-space: break-spaces;
+      }
+      .zc__bubble_container .zc__bubble__wrap .zc__bubble__item img,
+      .zc__bubble_container .zc__bubble__wrap .zc__bubble__item_one img {
+        max-width: 100%;
+      }
+      .zc__bubble_container .zc__bubble__wrap .zc__bubble__item video,
+      .zc__bubble_container .zc__bubble__wrap .zc__bubble__item_one video {
+        width: 100%;
+        min-width: 240px;
+        border-radius: 4px;
+      }
+      .zc__bubble_container .zc__bubble__wrap .zc__bubble__item audio,
+      .zc__bubble_container .zc__bubble__wrap .zc__bubble__item_one audio {
+        max-width: 100%;
+      }
+      .zc__bubble_container
+        .zc__bubble__wrap
+        .zc__bubble__item
+        div[data-w-e-type="attachment"],
+      .zc__bubble_container
+        .zc__bubble__wrap
+        .zc__bubble__item_one
+        div[data-w-e-type="attachment"] {
+        background-color: #fff;
+        max-width: 100%;
+        box-sizing: border-box;
+      }
+      .zc__bubble_container
+        .zc__bubble__wrap
+        .zc__bubble__item
+        div[data-w-e-type="attachment"]
+        .w-e-textarea-attach-card-icon-container,
+      .zc__bubble_container
+        .zc__bubble__wrap
+        .zc__bubble__item_one
+        div[data-w-e-type="attachment"]
+        .w-e-textarea-attach-card-icon-container {
+        min-width: 48px;
+      }
+      .zc__bubble_container
+        .zc__bubble__wrap
+        .zc__bubble__item
+        div[data-w-e-type="attachment"]
+        .w-e-textarea-attach-card-fileName-container,
+      .zc__bubble_container
+        .zc__bubble__wrap
+        .zc__bubble__item_one
+        div[data-w-e-type="attachment"]
+        .w-e-textarea-attach-card-fileName-container {
+        max-width: 80%;
+      }
+      .zc__bubble_container
+        .zc__bubble__wrap
+        .zc__bubble__item
+        div[data-w-e-type="attachment"]
+        .w-e-textarea-attach-card-fileName-container
+        span,
+      .zc__bubble_container
+        .zc__bubble__wrap
+        .zc__bubble__item_one
+        div[data-w-e-type="attachment"]
+        .w-e-textarea-attach-card-fileName-container
+        span {
+        max-width: 100%;
+      }
+      .zc__bubble_container
+        .zc__bubble__wrap
+        .zc__bubble__item
+        div[data-w-e-type="link-card"],
+      .zc__bubble_container
+        .zc__bubble__wrap
+        .zc__bubble__item_one
+        div[data-w-e-type="link-card"] {
+        background-color: #fff;
+        max-width: 100%;
+        box-sizing: border-box;
+      }
+      .zc__bubble_container .zc__bubble__wrap .zc__bubble__item table,
+      .zc__bubble_container .zc__bubble__wrap .zc__bubble__item_one table {
+        border-collapse: collapse;
+      }
+      .zc__bubble_container .zc__bubble__wrap .zc__bubble__item table td,
+      .zc__bubble_container .zc__bubble__wrap .zc__bubble__item_one table td,
+      .zc__bubble_container .zc__bubble__wrap .zc__bubble__item table th,
+      .zc__bubble_container .zc__bubble__wrap .zc__bubble__item_one table th {
+        border: 1px solid #ccc;
+        min-width: 50px;
+        height: 20px;
+      }
+      .zc__bubble_container .zc__bubble__wrap .zc__bubble__item table th,
+      .zc__bubble_container .zc__bubble__wrap .zc__bubble__item_one table th {
+        background-color: #f1f1f1;
+      }
+      .zc__bubble_container .zc__bubble__wrap .zc__bubble__item table td,
+      .zc__bubble_container .zc__bubble__wrap .zc__bubble__item_one table td {
+        background-color: #fff;
+      }
+      .zc__bubble_container .zc__bubble__input {
+        width: 365px;
+        height: 56px;
+        background: #ffffff;
+        line-height: 56px;
+        color: #777474;
+        font-size: 14px;
+        box-shadow: rgba(53, 53, 53, 0.15) 0px 0px 10px 0px;
+        border-bottom-left-radius: 4px;
+        border-bottom-right-radius: 4px;
+        padding: 0 24px;
+        cursor: text;
+        box-sizing: border-box;
+        margin-left: 10px;
+        position: relative;
+      }
+      .zc__bubble_container .zc__bubble__input.more {
+        width: 296px;
+        margin-left: 46px;
+      }
+      .zc__bubble_container .zc__bubble__input.once {
+        width: 365px;
+        margin-left: 10px;
+      }
+      .zc__bubble_container .zc__bubble__input .zc__bubble__input_icon {
+        position: absolute;
+        right: 24px;
+        top: 18px;
+        cursor: pointer;
+        fill: #161616;
+      }
+    </style>
+  </head>
+  <body>
+    <script>
+      var protocol = window.location.protocol;
+      var hostname = window.location.hostname;
+      var pathname = window.location.pathname;
+      var search = window.location.search;
+      if (!["localhost", "127.0.0.1"].includes(hostname)) {
+        if (protocol === "http:") {
+          protocol = "https:";
+        }
+        if (hostname === "www.sobot.com") {
+          hostname = "www.sobot.com";
+        }
+        if (pathname === "/index.html") {
+          pathname = "";
+        }
+        var url = protocol + "//" + hostname + pathname + search;
+        if (url !== window.location.href) {
+          window.location.href = url;
+        }
+      }
+    </script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag() {
+        dataLayer.push(arguments);
+      }
+      gtag("js", new Date());
+      gtag("config", "G-K3XLQY20V7");
+    </script>
+    <script>
+      window.onload = function () {
+        var menuChange = function () {
+          var path = window.location.pathname;
+          console.log("path", path);
+          var $headerMenus = $(".header-menus");
+          var $home = $headerMenus.find("li").eq(0);
+          var $products = $headerMenus.find("li").eq(1);
+          var $solutions = $headerMenus.find("li").eq(2);
+          var $customers = $headerMenus.find("li").eq(3);
+          var $support = $headerMenus.find("li").eq(4);
+          var $about = $headerMenus.find("li").eq(5);
+          switch (path) {
+            case "/ticketing.html":
+            case "/en/ticketing.html":
+              $products.addClass("active");
+              break;
+            case "/mailsupport.html":
+            case "/en/mailsupport.html":
+              $products.addClass("active");
+              break;
+            case "/chatbot.html":
+            case "/en/chatbot.html":
+              $products.addClass("active");
+              break;
+            case "/callcenter.html":
+            case "/en/callcenter.html":
+              $products.addClass("active");
+              break;
+            case "/livechat.html":
+            case "/en/livechat.html":
+              $products.addClass("active");
+              break;
+            case "/whatsapp.html":
+            case "/en/whatsapp.html":
+              $products.addClass("active");
+              break;
+            case "/retail.html":
+            case "/en/retail.html":
+            case "/financial-services.html":
+            case "/en/financial-services.html":
+            case "/omnichannel.html":
+            case "/en/omnichannel.html":
+              $solutions.addClass("active");
+              break;
+            case "/en/customers.html":
+              $customers.addClass("active");
+              break;
+            case "/about.html":
+            case "/en/about.html":
+              $about.eq(5).addClass("active");
+              break;
+            case "/help.html":
+            case "/en/help.html":
+              $support.addClass("active");
+              break;
+            case "/apidoc.html":
+            case "/en/apidoc.html":
+              $support.addClass("active");
+              break;
+            case "/sobotapp.html":
+            case "/en/sobotapp.html":
+              $support.addClass("active");
+              break;
+            case "/deliver.html":
+            case "/en/deliver.html":
+              $support.addClass("active");
+              break;
+            case "/deliverAndServices.html":
+            case "/en/deliverAndServices.html":
+              $support.addClass("active");
+              break;
+            case "/demo.html":
+            case "/en/demo.html":
+              break;
+            default:
+              $headerMenus.find("li").eq(0).addClass("active");
+              $(".top").addClass("white");
+              scrollFn();
+              break;
+          }
+        };
+        var onTop = function () {
+          var top = $(window).scrollTop();
+          var myAllPath = [
+            "/en/callcenter.html",
+            "/en/chatbot.html",
+            "/callcenter.html",
+            "/chatbot.html",
+            "/livechat.html",
+            "/en/livechat.html",
+            "/mailsupport.html",
+            "/en/mailsupport.html",
+            "/en/ticketing.html",
+            "/ticketing.html",
+            "/en/clause.html",
+            "/clause.html",
+            "/en/whatsapp.html",
+            "/whatsapp.html",
+            "/en/deliver.html",
+            "/deliver.html",
+            "/en/demo.html",
+            "/demo.html",
+            "/terms-of-services.html",
+            "/en/terms-of-services.html",
+            "/privacy-protection-policy.html",
+            "/en/privacy-protection-policy.html",
+            "/zh-terms-of-services.html",
+            "/en/zh-terms-of-services.html",
+            "/zh-privacy-protection-policy.html",
+            "/en/zh-privacy-protection-policy.html",
+          ];
+          var myPath = window.location.pathname;
+          if ($(".header-menus").find("li").eq(0).hasClass("active")) {
+            if (top >= 50) {
+              $(".top").removeClass("white");
+            } else {
+              if (myAllPath.includes(myPath)) {
+                $(".top").removeClass("white");
+              } else {
+                $(".top").addClass("white");
+              }
+            }
+          }
+        };
+        var scrollFn = function () {
+          onTop();
+          $(window).scroll(function () {
+            onTop();
+          });
+        };
+        var bindListener = function () {
+          menuChange();
+          scrollFn();
+        };
+        var init = function () {
+          bindListener();
+        };
+        init();
+      };
+    </script>
+    <script>
+      (function () {
+        var delay = 10 * 1000;
+        var $modal = $(".book-demo");
+        $(".book-demo-close").click(function () {
+          $modal.fadeOut(200);
+        });
+        $(".demo-btn").click(function () {
+          window.sessionStorage.setItem("autoShowDemo", "false");
+        });
+        $(function () {
+          setTimeout(function () {
+            var hasBookDemo =
+              window.localStorage.getItem("hasBookDemo") === "true";
+            var disableDemo = [
+              "/demo.html",
+              "/en/demo.html",
+              "/terms-of-services.html",
+              "/en/terms-of-services.html",
+              "/privacy-protection-policy.html",
+              "/en/privacy-protection-policy.html",
+              "/zh-terms-of-services.html",
+              "/en/zh-terms-of-services.html",
+              "/zh-privacy-protection-policy.html",
+              "/en/zh-privacy-protection-policy.html",
+            ].includes(window.location.pathname);
+            var shouldAutoShow =
+              window.sessionStorage.getItem("autoShowDemo") !== "false";
+            if (!hasBookDemo && !disableDemo && shouldAutoShow) {
+              window.sessionStorage.setItem("autoShowDemo", "false");
+              $modal.fadeIn(200);
+            }
+          }, delay);
+        });
+      })();
+    </script>
+    <div id="about" class="flex justify-center" style="flex-direction: column">
+      <header>
+        <div class="header">
+          <div class="top white">
+            <div class="header-container">
+              <div class="logo">
+                <a href="./index.html"><i></i><span></span></a>
+              </div>
+              <div class="menu">
+                <ul class="header-menus">
+                  <li>
+                    <a href="./index.html">Home</a>
+                  </li>
+                  <li class="active">
+                    <a href="./about.html">About Us</a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="sup-layer-supporrt">
+            <div class="left">
+              <div class="item-one">
+                <span class="title">Help Center</span>
+                <ul class="sup-items">
+                  <li class="sup-item">
+                    <a href="" target="_blank"
+                      ><div class="item-logo">
+                        <img
+                          class="p11"
+                          src="./about/productDocumentation.png"
+                        />
+                      </div>
+                      <div class="item-desc">
+                        <span>Product Documentation</span>
+                        <span>Explore resources by product</span>
+                      </div></a
+                    >
+                  </li>
+                  <li class="sup-item">
+                    <a href="" target="_blank"
+                      ><div class="item-logo">
+                        <img
+                          class="p12"
+                          src="./about/developerDocumentation.png"
+                        />
+                      </div>
+                      <div class="item-desc">
+                        <span>Developer Documentation</span>
+                        <span>Developer guides, and API references</span>
+                      </div></a
+                    >
+                  </li>
+                  <li class="sup-item">
+                    <a href=""
+                      ><div class="item-logo">
+                        <img class="p6" src="./about/app.png" />
+                      </div>
+                      <div class="item-desc">
+                        <span>Sobot APP</span>
+                        <span>Service with mobile App anytime, anywhere</span>
+                      </div></a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="item-two">
+                <span class="title">Deliver and Services</span>
+                <ul class="sup-items">
+                  <li class="sup-item">
+                    <a href=""
+                      ><div class="item-logo">
+                        <img class="p13" src="./about/deliverAndServices.png" />
+                      </div>
+                      <div class="item-desc">
+                        <span>Deliver and Services</span>
+                        <span>100% strive for excellence service</span>
+                      </div></a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <div class="sup-layer-solutions">
+            <div class="left">
+              <div class="item-one">
+                <span class="title">Industries</span>
+                <ul class="sup-items">
+                  <li class="sup-item">
+                    <a href=""
+                      ><div class="item-logo">
+                        <img class="p12" src="./about/solutions-retail.png" />
+                      </div>
+                      <div class="item-desc">
+                        <span>E-C &amp; Retail</span>
+                        <span>Great CX driving revenue growth</span>
+                      </div></a
+                    >
+                  </li>
+                  <li class="sup-item">
+                    <a href=""
+                      ><div class="item-logo">
+                        <img
+                          class="p12"
+                          src="./about/solutions-financial-services.png"
+                        />
+                      </div>
+                      <div class="item-desc">
+                        <span>Financial Services</span>
+                        <span>Safer systems and better experiences</span>
+                      </div></a
+                    >
+                  </li>
+                </ul>
+              </div>
+              <div class="item-two">
+                <span class="title">Features</span>
+                <ul class="sup-items">
+                  <li class="sup-item">
+                    <a href=""
+                      ><div class="item-logo">
+                        <img
+                          class="p12"
+                          src="./about/solutions-omnichannei.png"
+                        />
+                      </div>
+                      <div class="item-desc">
+                        <span>Omnichannel + AI</span>
+                        <span>Engage customers across every channel</span>
+                      </div></a
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="book-demo" style="display: none">
+          <div class="book-demo-mask"></div>
+          <div class="book-demo-content">
+            <div class="book-demo-title">Book a Demo Now！</div>
+            <div class="book-demo-close"></div>
+            <div class="book-demo-desc">
+              Call Center, Live Chat, Chatbot, WhatsApp API ...<br />Anything
+              you'd like to inquire?
+            </div>
+            <a class="book-demo-button" href="" replace=""
+              ><span>Get Started</span>
+              <svg
+                t="1659681359447"
+                viewBox="0 0 1024 1024"
+                version="1.1"
+                xmlns="http://www.w3.org/2000/svg"
+                p-id="6023"
+                width="14"
+                height="14"
+              >
+                <path
+                  d="M621.248 877.248l320-320a64 64 0 0 0 0-90.496l-320-320a64 64 0 1 0-90.496 90.496L741.504 448H128a64 64 0 1 0 0 128h613.504l-210.752 210.752c-12.48 12.48-18.752 28.864-18.752 45.248s6.24 32.768 18.752 45.248a64 64 0 0 0 90.496 0z"
+                  p-id="6024"
+                  fill="#ffffff"
+                ></path></svg
+            ></a>
+            <div class="book-demo-bg"></div>
+          </div>
+        </div>
+      </header>
+
+      <div class="container">
+        <div class="box-content">
+          <div class="caption caption3">
+            <div class="detail">
+              <div class="industry-info">
+                <el-row>
+                  <el-col :xs="24" :sm="24" :md="12" :lg="12">
+                    <div
+                      class="industry-info-box box0 active flex1"
+                      data-id="0"
+                      style="padding-right: 116px"
+                    >
+                      <p
+                        class=""
+                        style="
+                          color: #333;
+                          font-size: 80px;
+                          margin-bottom: 12px;
+                        "
+                      >
+                        Our Vision
+                      </p>
+                      <p class="tip3">
+                        <span
+                          style="
+                            color: #f6a21e;
+                            font-size: 60px;
+                            margin-top: 12px;
+                            line-height: 62px;
+                          "
+                          >Everyone deserves equal access to education.
+                        </span>
+                      </p>
+                      <p class="tip3">
+                        <span class="tip3-text"
+                          >NudgeBridge is committed to supporting educational
+                          equity around the world. We hope that we serve as a
+                          “bridge” between the sponsors, disadvantaged groups of
+                          people, and the world.</span
+                        >
+                      </p>
+                      <p class="tip3">
+                        <span class="tip3-text"
+                          >We’re working to make the world a better place to
+                          live for everyone. We spread awareness for our cause,
+                          offer programs and services to our community and fund
+                          initiatives for change.</span
+                        >
+                      </p>
+                      <p class="tip3">
+                        <span class="tip3-text">
+                          We’re proud of the work we’ve been able to accomplish
+                          and thankful for the generosity of our supporters as
+                          we move toward a brighter future.
+                        </span>
+                      </p>
+                    </div>
+                  </el-col>
+                  <el-col :xs="24" :sm="24" :md="12" :lg="12">
+                    <div style="padding-top: 80px">
+                      <img
+                        style="width: 100%"
+                        src="./img/Rectangle 209.png"
+                        alt="Sobot Retail"
+                      />
+                    </div>
+                  </el-col>
+                </el-row>
+              </div>
+              <div
+                style="
+                  padding-top: 50px;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                "
+              >
+                <div>
+                  <img style="display: none" src="./img/up.svg" alt="" />
+                  <div style="color: #191919; font-size: 30px">Scroll</div>
+                  <img src="./img/Vector 2.svg" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="container">
+        <div class="box-content">
+          <div class="caption caption3">
+            <div class="detail">
+              <div class="industry-info" style="display: flex">
+                <el-row>
+                  <el-col :xs="24" :sm="24" :md="12" :lg="12">
+                    <div
+                      class="industry-info-box box0 active"
+                      data-id="0"
+                      style="padding-right: 116px"
+                    >
+                      <p
+                        class=""
+                        style="
+                          color: #333;
+                          font-size: 80px;
+                          margin-bottom: 12px;
+                        "
+                      >
+                        Our Vision
+                      </p>
+                      <p class="tip3">
+                        <span
+                          style="
+                            color: #f6a21e;
+                            font-size: 60px;
+                            margin-top: 12px;
+                            line-height: 62px;
+                          "
+                          >“Build the bridge to connect this world.”
+                        </span>
+                      </p>
+                      <p class="tip3">
+                        <span class="tip3-text"
+                          >We want to be the bridge connecting this end of the
+                          world we see to the other end of the world that we
+                          heard. Through our work in communities around the
+                          world, we’re focusing on the following points to make
+                          a positive difference through the following:</span
+                        >
+                      </p>
+                      <p class="tip3">
+                        <span class="tip3-text"
+                          ><span
+                            style="
+                              display: inline-block;
+                              position: relative;
+                              top: -6px;
+                            "
+                            >.</span
+                          >
+                          Direct Financial Assistance</span
+                        >
+                      </p>
+                      <p class="tip3">
+                        <span class="tip3-text">
+                          <span
+                            style="
+                              display: inline-block;
+                              position: relative;
+                              top: -6px;
+                            "
+                            >.</span
+                          >
+                          Offer Community Programs and Services
+                        </span>
+                      </p>
+                      <p class="tip3">
+                        <span class="tip3-text">
+                          <span
+                            style="
+                              display: inline-block;
+                              position: relative;
+                              top: -6px;
+                            "
+                            >.</span
+                          >
+                          Empower Educational Institutions
+                        </span>
+                      </p>
+                      <p class="tip3">
+                        <span class="tip3-text">
+                          <span
+                            style="
+                              display: inline-block;
+                              position: relative;
+                              top: -6px;
+                            "
+                            >.</span
+                          >
+                          Raise awareness by Spreading Voices
+                        </span>
+                      </p>
+                    </div>
+                  </el-col>
+                  <el-col :xs="24" :sm="24" :md="12" :lg="12">
+                    <div style="padding-top: 80px">
+                      <img
+                        style="width: 100%"
+                        src="./img/Rectangle 210.png"
+                        alt="Sobot Retail"
+                      />
+                    </div>
+                  </el-col>
+                </el-row>
+              </div>
+              <div
+                style="
+                  padding-top: 50px;
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                "
+              >
+                <div>
+                  <img style="display: none" src="./img/up.svg" alt="" />
+                  <div style="color: #191919; font-size: 30px">Scroll</div>
+                  <img src="./img/Vector 2.svg" alt="" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="support-container" style="text-align: center">
+        <div style="text-align: center">
+          <div
+            style="
+              color: #fff;
+              font-size: 60px;
+              font-style: normal;
+              font-weight: 800;
+              line-height: 65px; /* 108.333% */
+              letter-spacing: 1.2px;
+            "
+          >
+            Support Our Mission
+          </div>
+          <div
+            style="
+              color: #fff;
+              font-size: 35px;
+              font-style: normal;
+              font-weight: 700;
+              line-height: 42px; /* 120% */
+              letter-spacing: 0.7px;
+              margin: 20px 0 45px;
+            "
+          >
+            Every donation helps us bring comfort, dignity and peace of mind to
+            more people. Could you pitch in to help?
+          </div>
+          <div
+            style="
+              color: #fff;
+              font-size: 20px;
+              font-style: normal;
+              font-weight: 700;
+              line-height: normal;
+              border: 1px solid #fff;
+              width: fit-content;
+              padding: 5px;
+              margin: 0 auto;
+            "
+          >
+            Support
+          </div>
+        </div>
+      </div>
+      <div class="footer" style="background-color: #191919; padding: 20px 0">
+        <div class="footer-bottom">
+          <el-row :gutter="20">
+            <el-col :xs="12" :sm="12" :md="6" :lg="6">
+              <div
+                style="
+                  flex: 1;
+                  color: #fff;
+                  font-size: 18px;
+                  font-style: normal;
+                  font-weight: 400;
+                  line-height: 25px; /* 138.889% */
+                  padding-right: 167px;
+                "
+              >
+                At NudgeBridge, we work to bridge the gap between high-achieving
+                low-income students and the world through fundraising and
+                mentorship.
+              </div>
+            </el-col>
+            <el-col :xs="12" :sm="12" :md="6" :lg="6">
+              <div
+                style="
+                  flex: 1;
+                  color: #fff;
+                  font-size: 18px;
+                  font-style: normal;
+                  font-weight: 400;
+                  line-height: 25px; /* 138.889% */
+                  padding-right: 167px;
+                "
+              >
+                NudgeBridge Non-profit Organizations 210 Packard Ave, Medford,
+                MA 02155 admin@nudgebridge.org
+              </div>
+            </el-col>
+            <el-col :xs="12" :sm="12" :md="6" :lg="6">
+              <div
+                style="
+                  flex: 1;
+                  color: #fff;
+                  font-size: 18px;
+                  font-style: normal;
+                  font-weight: 400;
+                  line-height: 25px; /* 138.889% */
+                  padding-right: 123px;
+                "
+              >
+                Developers Shida Xu | UI Designer Ada Ma | Programer
+              </div>
+            </el-col>
+            <el-col :xs="12" :sm="12" :md="6" :lg="6">
+              <div
+                style="
+                  flex: 1;
+                  color: #fff;
+                  font-size: 18px;
+                  font-style: normal;
+                  font-weight: 400;
+                  line-height: 25px; /* 138.889% */
+                "
+              >
+                <img
+                  style="width: 108px; height: 75px"
+                  src="./img/Nudge Bridge Logo.svg"
+                  alt=""
+                />
+              </div>
+            </el-col>
+          </el-row>
+        </div>
+      </div>
+      <footer style="background-color: #000; height: 50px">
+        <div
+          class="footer-bottom"
+          style="
+            height: 50px;
+            margin: 0 auto;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+          "
+        >
+          <div
+            style="
+              color: rgba(255, 255, 255, 0.5);
+              font-family: Helvetica Now Display;
+              font-size: 14px;
+              font-style: normal;
+              font-weight: 500;
+              line-height: normal;
+            "
+          >
+            © 2023 NudgeBridge | US 501 (c)-3 Nonprofit. All Rights Reserved.
+          </div>
+          <div>
+            <img
+              style="width: 17px; height: 14px; margin-right: 14px"
+              src="./img/Twitter.svg"
+              alt=""
+            />
+            <img
+              style="width: 17px; height: 14px; margin-right: 14px"
+              src="./img/Ins.svg"
+              alt=""
+            />
+            <img
+              style="width: 17px; height: 14px; margin-right: 14px"
+              src="./img/Linkedin.svg"
+              alt=""
+            />
+            <img
+              style="width: 17px; height: 14px; margin-right: 14px"
+              src="./img/Wechat.svg"
+              alt=""
+            />
+          </div>
+        </div>
+      </footer>
+      <div
+        id="zc__wapper__shadow"
+        style="
+          width: 100%;
+          z-index: 10000;
+          height: 100%;
+          background: rgba(0, 0, 0, 0.5);
+          padding: 0px;
+          margin: 0px;
+          top: 0px;
+          bottom: 0px;
+          left: 0px;
+          display: none;
+        "
+      ></div>
+      <div
+        id="zc__bubble_container"
+        class="zc__bubble_container more"
+        style="bottom: 80px; right: 40px"
+      >
+        <svg
+          t="1663674462604"
+          class="icon zc__bubble_container_close animate__animated animate__bounceIn"
+          id="zc__bubble_container_close"
+          viewBox="0 0 1024 1024"
+          version="1.1"
+          xmlns="http://www.w3.org/2000/svg"
+          p-id="4956"
+          width="200"
+          fill="#a3a5a8"
+          height="200"
+        >
+          <path
+            d="M158.72 130.24c-211.392 195.776-211.392 520.64 0 716.416a488 488 0 0 0 658.432 3.904c218.752-197.888 218.752-526.336 0-724.224a488 488 0 0 0-658.432 3.84z m536.96 563.904a29.888 29.888 0 0 1-42.24 0l-161.28-161.28a1.664 1.664 0 0 0-2.368 0l-161.28 161.28a29.888 29.888 0 0 1-42.24 0v-0.064a29.888 29.888 0 0 1 0-42.24l161.216-161.28a1.664 1.664 0 0 0 0-2.368l-161.28-161.28a29.888 29.888 0 1 1 42.24-42.24l161.28 161.28c0.704 0.64 1.792 0.64 2.432 0l161.28-161.28a29.888 29.888 0 0 1 42.24 0h0.064a29.888 29.888 0 0 1 0 42.24l-161.28 161.28a1.664 1.664 0 0 0 0 2.432l161.28 161.28a29.888 29.888 0 0 1 0 42.24h-0.064z"
+            p-id="4957"
+          ></path>
+        </svg>
+        <div
+          id="zc__bubble__wrap"
+          class="zc__bubble__wrap animate__animated animate__slideInUp"
+          style="max-height: calc(100vh - 200px)"
+        >
+          <ul id="zc__bubble__wrap_ul" style="padding: 0; margin: 0"></ul>
+        </div>
+        <div
+          id="zc__bubble__input"
+          class="zc__bubble__input animate__animated animate__fadeInUp more"
+        >
+          描述您的问题…
+          <svg
+            t="1662790281803"
+            class="zc__bubble__input_icon"
+            viewBox="0 0 1024 1024"
+            version="1.1"
+            xmlns="http://www.w3.org/2000/svg"
+            p-id="5768"
+            width="22"
+            height="22"
+          >
+            <path
+              d="M512 1024C229.218462 1024 0 794.781538 0 512S229.218462 0 512 0s512 229.218462 512 512-229.218462 512-512 512z m0-960C264.96 64 64 264.96 64 512c0 247.020308 200.96 448 448 448S960 759.020308 960 512C960 264.96 759.04 64 512 64zM669.538462 472.615385a59.076923 59.076923 0 1 1 0-118.153847 59.076923 59.076923 0 0 1 0 118.153847z m-315.076924 0a59.076923 59.076923 0 1 1 0-118.153847 59.076923 59.076923 0 0 1 0 118.153847z m156.356924 359.34523l-3.859693 0.039385c-194.953846 0-276.716308-172.406154-280.123077-179.790769-7.246769-15.753846-0.118154-34.264615 15.95077-41.393231 16.068923-7.089231 34.875077-0.118154 42.180923 15.517538 2.756923 5.907692 68.864 143.104 222.12923 143.104l2.993231-0.039384c162.875077-1.851077 228.194462-141.410462 228.844308-142.808616a32.059077 32.059077 0 0 1 42.141538-15.832615 31.035077 31.035077 0 0 1 16.147693 41.314462c-3.268923 7.227077-83.042462 177.545846-286.385231 179.88923z"
+              p-id="5769"
+            ></path>
+          </svg>
+        </div>
+      </div>
+    </div>
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script src="https://unpkg.com/element-ui/lib/index.js"></script>
+    <script>
+      Vue.component(Element);
+      // 或者局部注册
+      new Vue({
+        el: "#about",
+      });
+    </script>
+  </body>
+</html>

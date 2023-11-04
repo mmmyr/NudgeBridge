@@ -1,0 +1,726 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/about.css" />
+    <link rel="stylesheet" href="./css/donation-dia.css" />
+    <style>
+      .dialog-pro {
+        width: 600px;
+        padding: 30px 43px 30px 30px;
+        margin: 0 auto;
+        background: rgba(25, 25, 25, 0.95);
+      }
+      [v-cloak] {
+        display: none;
+      }
+      .donation-type.active {
+        background-color: #f6a21e;
+      }
+    </style>
+    <script src="./js/jquery.min.js"></script>
+  </head>
+  <body class="body flex align-center">
+    <div class="dialog-pro" id="donation" v-cloak>
+      <div v-if="[1,2,3].includes(informationProcess)">
+        <div class="flex space-between">
+          <div class="title">
+            <p
+              style="
+                color: #fff;
+                font-family: Miller Banner;
+                font-size: 30px;
+                font-style: normal;
+                font-weight: 700;
+                line-height: normal;
+              "
+            >
+            
+  
+              {{ informationProcess == 1?'Make a Donation for':informationProcess
+              == 2?'Your ':'Payment'}}
+            </p>
+            <p
+              style="
+                color: #f6a21e;
+                font-family: Miller Banner;
+                font-size: 30px;
+                font-style: normal;
+                font-weight: 700;
+              "
+            >
+              {{ informationProcess == 1?'NudgeBridge':informationProcess ==
+              2?'Information ':'Information'}}
+            </p>
+          </div>
+          <div class="close">
+            <img
+              style="width: 87px; height: 61px"
+              src="./img/Nudge Bridge Logo.svg"
+              alt=""
+            />
+          </div>
+        </div>
+        <div v-if="informationProcess == 1">
+          <div style="margin-top: 34px">
+            <p
+              style="
+                color: #fff;
+                font-family: Helvetica Now Display;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 700;
+                margin-bottom: 12px;
+              "
+            >
+              Donation Type
+            </p>
+            <div
+              class="flex"
+              style="width: fit-content; border: 1px solid #fff; cursor: pointer"
+            >
+              <div
+                class="flex align-center donation-type"
+                v-for="(item,index) in donationTypes"
+                :key="item.id"
+                :class="[index === selectDonationIndex ? 'active' : '']"
+                @click="changeDonationType(index)"
+              >
+                <div
+                  class="label"
+                  style="
+                    width: 100px;
+                    height: 30px;
+                    line-height: 30px;
+                    text-align: center;
+                  "
+                  :style="index === 0 ? 'border-right:1px solid #fff' : ''"
+                >
+                  <p
+                    style="
+                      color: #fff;
+                      font-family: Helvetica Now Display;
+                      font-size: 12px;
+                      font-style: normal;
+                      font-weight: 700;
+                    "
+                  >
+                    {{item.name}}
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+          <div style="margin-top: 32px">
+            <p
+              style="
+                color: #fff;
+                font-family: Helvetica Now Display;
+                font-size: 12px;
+                font-style: normal;
+                font-weight: 700;
+              "
+            >
+              Donation Amount
+            </p>
+            <div class="flex">
+              <div style="border-bottom: 1px solid #fff">
+                <label
+                  style="
+                    color: #fff;
+                    font-size: 14px;
+                    font-style: normal;
+                    font-weight: 700;
+                  "
+                  for=""
+                  >$</label
+                >
+                <input
+                  style="
+                    width: 130px;
+                    height: 30px;
+                    background: transparent;
+                    border: none;
+                    outline: none;
+                    color: #f6a21e;
+                    font-family: Helvetica Now Display;
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 700;
+                  "
+                  type="text"
+                  placeholder="100.00"
+                />
+              </div>
+              <div style="border-bottom: 1px solid #fff; margin-left: 30px">
+                <input
+                  style="
+                    width: 380px;
+                    height: 30px;
+                    background: transparent;
+                    border: none;
+                    outline: none;
+                    color: #f6a21e;
+                    font-family: Helvetica Now Display;
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 700;
+                  "
+                  type="text"
+                  placeholder="Write a private message to us (optional)"
+                />
+              </div>
+            </div>
+          </div>
+        </div>
+        <div v-else-if="informationProcess == 2">
+          <div class="flex" style="margin-top: 34px">
+            <div>
+              <p
+                style="
+                  color: #fff;
+                  font-family: Helvetica Now Display;
+                  font-size: 12px;
+                  font-style: normal;
+                  font-weight: 700;
+                "
+              >
+                First Name*
+              </p>
+              <div style="border-bottom: 1px solid #fff; width: fit-content">
+                <input
+                  style="
+                    width: 130px;
+                    height: 30px;
+                    background: transparent;
+                    border: none;
+                    outline: none;
+                    color: #f6a21e;
+                    font-family: Helvetica Now Display;
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 700;
+                  "
+                  type="text"
+                  placeholder="First Name"
+                />
+              </div>
+            </div>
+            <div style="margin-left: 34px">
+              <p
+                style="
+                  color: #fff;
+                  font-family: Helvetica Now Display;
+                  font-size: 12px;
+                  font-style: normal;
+                  font-weight: 700;
+                "
+              >
+                Last Name*
+              </p>
+              <div style="border-bottom: 1px solid #fff; width: fit-content">
+                <input
+                  style="
+                    width: 130px;
+                    height: 30px;
+                    background: transparent;
+                    border: none;
+                    outline: none;
+                    color: #f6a21e;
+                    font-family: Helvetica Now Display;
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 700;
+                  "
+                  type="text"
+                  placeholder="Last Name"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="flex" style="margin-top: 30px">
+            <div>
+              <p
+                style="
+                  color: #fff;
+                  font-family: Helvetica Now Display;
+                  font-size: 12px;
+                  font-style: normal;
+                  font-weight: 700;
+                "
+              >
+                Street Address*
+              </p>
+              <div style="border-bottom: 1px solid #fff; width: fit-content">
+                <input
+                  style="
+                    width: 480px;
+                    height: 30px;
+                    background: transparent;
+                    border: none;
+                    outline: none;
+                    color: #f6a21e;
+                    font-family: Helvetica Now Display;
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 700;
+                  "
+                  type="text"
+                  placeholder="Street Address"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="flex" style="margin-top: 30px">
+            <div>
+              <p
+                style="
+                  color: #fff;
+                  font-family: Helvetica Now Display;
+                  font-size: 12px;
+                  font-style: normal;
+                  font-weight: 700;
+                "
+              >
+                City*
+              </p>
+              <div style="border-bottom: 1px solid #fff; width: fit-content">
+                <input
+                  style="
+                    width: 130px;
+                    height: 30px;
+                    background: transparent;
+                    border: none;
+                    outline: none;
+                    color: #f6a21e;
+                    font-family: Helvetica Now Display;
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 700;
+                  "
+                  type="text"
+                  placeholder="City"
+                />
+              </div>
+            </div>
+            <div style="margin-left: 34px">
+              <p
+                style="
+                  color: #fff;
+                  font-family: Helvetica Now Display;
+                  font-size: 12px;
+                  font-style: normal;
+                  font-weight: 700;
+                "
+              >
+                Province/State
+              </p>
+              <div style="border-bottom: 1px solid #fff; width: fit-content">
+                <input
+                  style="
+                    width: 130px;
+                    height: 30px;
+                    background: transparent;
+                    border: none;
+                    outline: none;
+                    color: #f6a21e;
+                    font-family: Helvetica Now Display;
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 700;
+                  "
+                  type="text"
+                  placeholder="Province/State"
+                />
+              </div>
+            </div>
+            <div style="margin-left: 30px">
+              <p
+                style="
+                  color: #fff;
+                  font-family: Helvetica Now Display;
+                  font-size: 12px;
+                  font-style: normal;
+                  font-weight: 700;
+                "
+              >
+                Country*
+              </p>
+              <div style="border-bottom: 1px solid #fff; width: fit-content">
+                <input
+                  style="
+                    width: 130px;
+                    height: 30px;
+                    background: transparent;
+                    border: none;
+                    outline: none;
+                    color: #f6a21e;
+                    font-family: Helvetica Now Display;
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 700;
+                  "
+                  type="text"
+                  placeholder="Country"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="flex" style="margin-top: 30px">
+            <div>
+              <p
+                style="
+                  color: #fff;
+                  font-family: Helvetica Now Display;
+                  font-size: 12px;
+                  font-style: normal;
+                  font-weight: 700;
+                "
+              >
+                ZIP Code*
+              </p>
+              <div style="border-bottom: 1px solid #fff; width: fit-content">
+                <input
+                  style="
+                    width: 130px;
+                    height: 30px;
+                    background: transparent;
+                    border: none;
+                    outline: none;
+                    color: #f6a21e;
+                    font-family: Helvetica Now Display;
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 700;
+                  "
+                  type="text"
+                  placeholder="ZIP Code"
+                />
+              </div>
+            </div>
+            <div style="margin-left: 30px">
+              <p
+                style="
+                  color: #fff;
+                  font-family: Helvetica Now Display;
+                  font-size: 12px;
+                  font-style: normal;
+                  font-weight: 700;
+                "
+              >
+                Email Address*
+              </p>
+              <div style="border-bottom: 1px solid #fff; width: fit-content">
+                <input
+                  style="
+                    width: 130px;
+                    height: 30px;
+                    background: transparent;
+                    border: none;
+                    outline: none;
+                    color: #f6a21e;
+                    font-family: Helvetica Now Display;
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 700;
+                  "
+                  type="text"
+                  placeholder="Email Address"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="flex" style="margin-top: 30px">
+            <div
+              class="flex align-center"
+              v-for="item in donationList"
+              :key="item.id"
+              style="margin-right: 30px"
+            >
+              <div
+                :style="donationSelected.includes(item.name)"
+                style="width: 8px; height: 8px; border: 1px solid #fff"
+              ></div>
+              <p
+                style="
+                  color: #fff;
+                  font-size: 12px;
+                  font-weight: 700;
+                  margin-left: 8px;
+                "
+              >
+                {{item.name}}
+              </p>
+            </div>
+          </div>
+        </div>
+        <div v-else-if="informationProcess == 3">
+          <div class="flex" style="margin-top: 34px">
+            <div>
+              <p
+                style="
+                  color: #fff;
+                  font-family: Helvetica Now Display;
+                  font-size: 12px;
+                  font-style: normal;
+                  font-weight: 700;
+                "
+              >
+                Credit Card Number
+              </p>
+              <div style="border-bottom: 1px solid #fff; width: fit-content">
+                <input
+                  style="
+                    width: 130px;
+                    height: 30px;
+                    background: transparent;
+                    border: none;
+                    outline: none;
+                    color: #f6a21e;
+                    font-family: Helvetica Now Display;
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 700;
+                  "
+                  type="text"
+                  placeholder="Credit Card Number"
+                />
+              </div>
+            </div>
+            <div style="margin-left: 34px">
+              <p
+                style="
+                  color: #fff;
+                  font-family: Helvetica Now Display;
+                  font-size: 12px;
+                  font-style: normal;
+                  font-weight: 700;
+                "
+              >
+                Name on Card
+              </p>
+              <div style="border-bottom: 1px solid #fff; width: fit-content">
+                <input
+                  style="
+                    width: 130px;
+                    height: 30px;
+                    background: transparent;
+                    border: none;
+                    outline: none;
+                    color: #f6a21e;
+                    font-family: Helvetica Now Display;
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 700;
+                  "
+                  type="text"
+                  placeholder="Name on Card"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="flex" style="margin-top: 30px">
+            <div>
+              <p
+                style="
+                  color: #fff;
+                  font-family: Helvetica Now Display;
+                  font-size: 12px;
+                  font-style: normal;
+                  font-weight: 700;
+                "
+              >
+                Expiration
+              </p>
+              <div style="">
+                <input
+                  style="
+                    width: 44px;
+                    height: 30px;
+                    background: transparent;
+                    border: none;
+                    outline: none;
+                    color: #f6a21e;
+                    font-family: Helvetica Now Display;
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 700;
+                    border-bottom: 1px solid #fff;
+                  "
+                  type="text"
+                  placeholder="07"
+                />
+                <input
+                  style="
+                    width: 44px;
+                    height: 30px;
+                    background: transparent;
+                    border: none;
+                    outline: none;
+                    color: #f6a21e;
+                    font-family: Helvetica Now Display;
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 700;
+                    border-bottom: 1px solid #fff;
+                    margin-left: 30px;
+                  "
+                  type="text"
+                  placeholder="28"
+                />
+              </div>
+            </div>
+            <div style="margin-left: 36px">
+              <p
+                style="
+                  color: #fff;
+                  font-family: Helvetica Now Display;
+                  font-size: 12px;
+                  font-style: normal;
+                  font-weight: 700;
+                "
+              >
+                Security Code
+              </p>
+              <div style="">
+                <input
+                  style="
+                    width: 44px;
+                    height: 30px;
+                    background: transparent;
+                    border: none;
+                    outline: none;
+                    color: #f6a21e;
+                    font-family: Helvetica Now Display;
+                    font-size: 12px;
+                    font-style: normal;
+                    font-weight: 700;
+                    border-bottom: 1px solid #fff;
+                  "
+                  type="text"
+                  placeholder="Security Code"
+                />
+              </div>
+            </div>
+          </div>
+          <p
+            style="
+              color: #fff;
+              font-family: Miller Banner;
+              font-size: 30px;
+              font-style: normal;
+              font-weight: 700;
+              margin-top: 60px;
+            "
+          >
+            Click “Done” to confirm your</br>
+            <span style="color: #f6a21e">One-time</span> donation of
+            <span style="color: #f6a21e">$15,000.</span>
+          </p>
+        </div>
+        <div class="flex space-between">
+          <div
+            v-if="informationProcess == 1"
+            style="
+              color: #fff;
+              font-size: 18px;
+              font-weight: 700;
+              margin-top: 50px;
+            "
+          >
+            Homepage
+          </div>
+          <div
+            @click="back"
+            v-else
+            style="
+              color: #fff;
+              font-size: 18px;
+              font-weight: 700;
+              margin-top: 50px;
+              cursor: pointer;
+            "
+          >
+            Back
+          </div>
+          <span
+            style="
+              color: #fff;
+              font-family: Miller Display;
+              font-size: 18px;
+              font-style: normal;
+              font-weight: 700;
+              line-height: normal;
+              opacity: 0.5;
+              margin-top: 50px;
+              cursor: pointer;
+            "
+            @click="next"
+            >{{informationProcess==3?'Done':'Next'}}</span
+          >
+        </div>
+      </div>
+      <div v-else>
+        <p style="color: #FFF;
+        text-align: center;
+        font-size: 30px;
+        font-weight: 700;margin: 30px 132px 34px;">Thank you for your 
+          Donation to <span style="color: #f6a21e;">NudgeBridge</span></p>
+          <div @click="back" style="padding: 5px 15px;
+          justify-content: center;
+          align-items: center;color: #FFF;
+          font-size: 20px;
+          font-weight: 700;
+          cursor: pointer;
+          margin: 0 auto;
+          width: fit-content;
+          border:1px solid #fff
+          ">Back</div>
+      </div>
+    </div>
+  </body>
+  <script src="./js/vue.js"></script>
+  <script>
+    new Vue({
+      el: "#donation",
+      data() {
+        return {
+          donationType: 0,
+          donationAmount: 0,
+          donationMessage: "",
+          donationTypes: [
+            { id: 0, name: "Once" },
+            { id: 1, name: "Monthly" },
+          ],
+          
+          selectDonationIndex: "",
+          informationProcess: 1,
+          donationList: [
+            { name: "Donate Anonymously", id: 0 },
+            { name: "Subscribe NudgeBridge", id: 1 },
+          ],
+          donationSelected: [],
+        };
+      },
+      methods: {
+        changeDonationType(index) {
+          this.selectDonationIndex = index;
+        },
+        next() {
+          this.informationProcess++;
+        },
+        back() {
+          this.informationProcess--;
+          console.log(
+            "%c [ this.informationProcess ]-353",
+            "font-size:13px; background:#4d0555; color:#914999;",
+            this.informationProcess
+          );
+        },
+      },
+    });
+  </script>
+</html>
